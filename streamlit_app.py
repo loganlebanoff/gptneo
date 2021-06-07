@@ -10,12 +10,12 @@ a=0
 #===========================================#
 @st.cache(allow_output_mutation=True, suppress_st_warning=True)
 def load_model():
-    from transformers import GPTNeoForCausalLM, GPT2Tokenizer, GPT2ModelForCausalLM
+    from transformers import GPTNeoForCausalLM, GPT2Tokenizer, GPT2ForCausalLM
     print('loading model')
     sys.stdout.flush()
     #model = GPTNeoForCausalLM.from_pretrained("EleutherAI/gpt-neo-2.7B")
     #tokenizer = GPT2Tokenizer.from_pretrained("EleutherAI/gpt-neo-2.7B")
-    model = GPT2ModelForCausalLM.from_pretrained("sshleifer/tiny-gpt2")
+    model = GPT2ForCausalLM.from_pretrained("sshleifer/tiny-gpt2")
     tokenizer = GPT2Tokenizer.from_pretrained("sshleifer/tiny-gpt2")
 
     model.to(device)

@@ -1,7 +1,7 @@
 import streamlit as st
 
 device = 'cpu'
-
+a=0
 
 
 #===========================================#

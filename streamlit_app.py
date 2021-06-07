@@ -2,6 +2,7 @@ import streamlit as st
 
 device = 'cpu'
 
+
 #===========================================#
 #        Loads Model and word_to_id         #
 #===========================================#

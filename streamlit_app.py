@@ -5,7 +5,7 @@ device = 'cpu'
 #===========================================#
 #        Loads Model and word_to_id         #
 #===========================================#
-@st.cache(allow_output_mutation=True, suppress_st_warning=True)
+#@st.cache(allow_output_mutation=True, suppress_st_warning=True)
 def load_model():
     from transformers import GPTNeoForCausalLM, GPT2Tokenizer, GPT2Model
     print('loading model')

@@ -9,7 +9,7 @@ device = 'cpu'
 def load_model():
     from transformers import GPTNeoForCausalLM, GPT2Tokenizer, GPT2Model
     print('loading model')
-    model = GPTNeoForCausalLM.from_pretrained("EleutherAI/gpt-neo-2.7B")
+    model = GPT2Model.from_pretrained("gpt2")
     tokenizer = GPT2Tokenizer.from_pretrained("EleutherAI/gpt-neo-2.7B")
     # model = GPT2Model.from_pretrained("sshleifer/tiny-gpt2")
     # tokenizer = GPT2Tokenizer.from_pretrained("sshleifer/tiny-gpt2")

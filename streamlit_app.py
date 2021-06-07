@@ -1,4 +1,5 @@
 import streamlit as st
+import sys
 
 device = 'cpu'
 a=0
@@ -11,6 +12,7 @@ a=0
 def load_model():
     from transformers import GPTNeoForCausalLM, GPT2Tokenizer
     print('loading model')
+    sys.stdout.flush()
     model = GPTNeoForCausalLM.from_pretrained("EleutherAI/gpt-neo-2.7B")
     tokenizer = GPT2Tokenizer.from_pretrained("EleutherAI/gpt-neo-2.7B")
     # model = GPT2Model.from_pretrained("sshleifer/tiny-gpt2")
@@ -96,5 +98,6 @@ In police groups they manage to filter a photograph of Óscar Pérez killed and 
             print(text)
             print('--')
             print(final_text)
+            sys.stdout.flush()
             # final_text = text
             st.write(final_text)
